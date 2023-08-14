@@ -1,0 +1,29 @@
+
+.wraps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 799px;
+  height: 212px;
+  margin: auto;
+}
+
+.imgSize {
+    width: 212px;
+    height: 212px;       
+}
+
+.heading {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.textContainer {
+  width: 556px;
+  height: 100px;
+}
+

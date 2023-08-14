@@ -1,0 +1,29 @@
+.cardBottom {
+  color: var(--color-white);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.stick {
+  display: inline-flex;
+  padding: 4px 8px;
+  align-items: flex-start;
+  gap: 1px;
+  border-radius: 10px;
+  background: #121212;
+  margin-bottom: 130px;
+  height: 23px;
+  width: 71px;
+}
+.ptext {
+    color: #FFF;
+    margin-top: 2px;
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
