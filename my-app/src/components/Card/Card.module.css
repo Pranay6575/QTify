@@ -1,4 +1,58 @@
-.cardBottom {
+.songCard {
+  height: 232px;
+  width: 159px;
+}
+
+.cardContent {
+  border-radius: 10px;
+}
+
+.cardPill {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  width: 75px;
+  height: 23px;
+  display: inline-flex;
+  padding: 4px 8px;
+  align-items: flex-start;
+  gap: 1px;
+  border-radius: 10px;
+  margin: 6px 6px;
+}
+
+.pillText {
+  color: #FFF;
+font-family: Poppins;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .cardBottom {
   color: var(--color-white);
   font-family: "Poppins";
   font-size: 14px;
@@ -26,4 +80,5 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+} */
+

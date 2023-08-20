@@ -1,25 +1,36 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
 import CardImage from "../../assets/SongImage.png";
 import styles from "./Card.module.css";
-import styled from "@emotion/styled";
+import { CardActionArea, CardMedia, Tooltip } from "@mui/material";
 
-const SongCard = () => {
-  return (
-    <>
-      <Card className={styles.wrap} sx={{ width: 159, height: 205 }}>
-        <img className={styles.imgsize} src={CardImage} alt="CardImage" />
-        <div className={styles.stick}>
-        <p className= {styles.ptext}style={{color: 'white'}}>100 Follows</p>
-        </div>
-      </Card>
-      <div className={styles.cardBottom}>New English Songs</div>
-    </>
-  );
+const SongCard = ({type, data}) => {
+  const getCard = (type) => {
+    switch (type) {
+      case "album": {
+        const { image, follows, title, songs } = data;
+        return (
+          <div className={styles.songCard}>
+              <Card className={styles.cardContent} sx={{ width: 159, height: 205 }}>
+                <CardActionArea>
+              <CardMedia
+              component='img'
+              image={image}
+              height='170'
+              alt="songimg"
+               />
+              <div className={styles.cardPill}><p className={styles.pillText}>{follows} Follows</p></div>
+                </CardActionArea>
+              </Card>
+              <p>{title}</p>
+          </div>
+        );
+      }
+      default:
+        return <></>;
+    }
+  };
+  return getCard(type);
 };
 
 export default SongCard;

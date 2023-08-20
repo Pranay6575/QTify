@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cardWrapper {
+    margin-top: 18px;
+}
