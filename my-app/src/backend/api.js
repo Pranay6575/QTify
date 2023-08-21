@@ -1,8 +1,9 @@
 import axios from "axios";
 
+
 export const config = "https://qtify-backend-labs.crio.do";
 
-const fetchTopAlbums = async () => {
+ const fetchTopAlbums = async () => {
   try {
     const res = await axios.get(`${config}/albums/top`);
     return res.data;
@@ -11,4 +12,7 @@ const fetchTopAlbums = async () => {
   }
 };
 
-export default fetchTopAlbums;
+ export default fetchTopAlbums;
+
+
+

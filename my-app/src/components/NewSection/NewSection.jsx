@@ -1,11 +1,10 @@
 import { CircularProgress } from "@mui/material";
-import Card from "../Card/Card"
+import NewCard from "../NewCard/NewCard";
 import React, { useState } from "react";
-import styles from "./Section.module.css";
+import styles from "./NewSection.module.css";
 import Carousel from "../Carousel/Carousel";
 
-
-const Section = ({ title, data, type }) => {
+const NewSection = ({ title, data, type }) => {
     const [toggleSwitch, setToggleSwitch] = useState(true);
 
     const handleToggle = () =>{
@@ -25,12 +24,12 @@ const Section = ({ title, data, type }) => {
             {!toggleSwitch? ( 
                 <div className={styles.wrapper}>
             {data.map((song)=> (
-                <Card data={song} type={type} key={song.id} />        
+                <NewCard data={song} type={type} key={song.id} />        
             ))}
             </div>
             )
             :(
-                <Carousel data={data} renderCardComponenet={(item) => <Card data={item} type={type} />}/>
+                <Carousel data={data} renderCardComponenet={(item) => <NewCard data={item} type={type} />}/>
 )}
         </div>)
       }
@@ -38,4 +37,4 @@ const Section = ({ title, data, type }) => {
   );
 };
 
-export default Section;
+export default NewSection;

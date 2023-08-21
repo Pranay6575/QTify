@@ -1,6 +1,5 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardImage from "../../assets/SongImage.png";
 import styles from "./Card.module.css";
 import { CardActionArea, CardMedia, Tooltip } from "@mui/material";
 
