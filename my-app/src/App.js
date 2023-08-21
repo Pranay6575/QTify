@@ -8,7 +8,6 @@ import Section from "./components/Section/Section";
 import NewSection from "./components/NewSection/NewSection";
 
 
-
 function App() {
 const[topAlbumData, setTopAlbumData] = useState({});
   const genrateTopAlbumData = async () =>{
