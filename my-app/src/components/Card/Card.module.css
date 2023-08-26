@@ -10,7 +10,7 @@
 .cardPill {
   background-color: var(--color-black);
   color: var(--color-white);
-  width: 75px;
+  max-width: max-content;
   height: 23px;
   display: inline-flex;
   padding: 4px 8px;
@@ -28,7 +28,6 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-
 
 
 

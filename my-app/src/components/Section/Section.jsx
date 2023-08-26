@@ -3,9 +3,10 @@ import Card from "../Card/Card"
 import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Carousel from "../Carousel/Carousel";
+import BasicTabs from "../FilterTabs/FilterTabs";
 
 
-const Section = ({ title, data, type }) => {
+const Section = ({ title, data, type,filterData=null, filterDataValues=[], toggle=false,  handleChange=null, value=null }) => {
     const [toggleSwitch, setToggleSwitch] = useState(true);
 
     const handleToggle = () =>{
@@ -18,6 +19,7 @@ const Section = ({ title, data, type }) => {
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleToggle}>{toggleSwitch?"Show all":"Collapse"}</h4>
       </div>
+      {type ==="song"?<BasicTabs value={value} handleChange={handleChange}/>:null}
       {
         !data.length ?(
            <CircularProgress color="inherit" />
@@ -30,7 +32,7 @@ const Section = ({ title, data, type }) => {
             </div>
             )
             :(
-                <Carousel data={data} renderCardComponenet={(item) => <Card data={item} type={type} />}/>
+                <Carousel data={data} renderCardComponenet={(data) => <Card data={data} type={type} />}/>
 )}
         </div>)
       }
