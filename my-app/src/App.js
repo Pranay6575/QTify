@@ -90,9 +90,12 @@ function App() {
       <HeroSection />
       <div className={styles.SectionWrapper}>
         <Section type="album" title="Top Albums" data={topAlbumData} filterDataValues={data} />
+        <hr style={{ background: '#34C94B',color: '#34C94B', borderColor: '#34C94B', height: '1px'}}/>
         <Section type="album" title="New Albums" data={newAlbumData} filterDataValues={data} />
+        <hr style={{ background: '#34C94B',color: '#34C94B', borderColor: '#34C94B', height: '1px'}}/>
         <Section type="song" title="Songs" data={SongNewData} filterData={filterData} filterDataValues={filterDataValues} value={value} handleToggle={handleToggle} handleChange={handleChange} />
-         
+        <hr style={{ background: 'lime',color: 'lime', borderColor: 'lime', height: '1px'}}/>
+        <AccordionSection/>       
       </div>
     </>
   );

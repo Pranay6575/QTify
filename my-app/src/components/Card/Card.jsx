@@ -2,13 +2,15 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import styles from "./Card.module.css";
 import { CardActionArea, CardMedia } from "@mui/material";
+import Tooltip from '@mui/material/Tooltip';
 
 const SongCard = ({type, data}) => {
   const getCard = (type) => {
     switch (type) {
       case "album": {
-        const { image, follows, title } = data;
+        const { image, follows, title, songs } = data;
         return (
+            <Tooltip title={`${songs.length} songs`} placement="top" arrow>
           <div className={styles.songCard}>
               <Card className={styles.cardContent} sx={{ width: 159, height: 205 }}>
                 <CardActionArea>
@@ -23,6 +25,7 @@ const SongCard = ({type, data}) => {
               </Card>
               <p>{title}</p>
           </div>
+          </Tooltip>
         );
       }
       case "song":{
