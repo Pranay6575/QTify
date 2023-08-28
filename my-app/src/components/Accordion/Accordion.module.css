@@ -1,13 +1,52 @@
 .AccordionHeader {
-text-align: center;
-margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.divText{
-    margin: auto;
-    width: 1135px;
-    height: 78px;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
+.divText {
+  margin: auto;
+  width: 1135px;
+  height: 78px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  top: 1494px;
+  left: 152px;
+  border-radius: 10px;
+  border: 1px;
 }
+
+.AccordionBox {
+  margin-bottom: 24px;
+}
+.AccordionSummary {
+  height: 78px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: #121212;
+}
+
+.AccordionDetails {
+  height: 81px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 10px 10px;
+  background: #fff;
+  
+}
+
+.AccordionArrow {
+  color: var(--primary-400, #34c94b);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Font Awesome 6 Pro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 0.15px;
+}
+
+
+
+

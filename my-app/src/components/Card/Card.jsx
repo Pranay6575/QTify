@@ -10,6 +10,7 @@ const SongCard = ({type, data}) => {
       case "album": {
         const { image, follows, title, songs } = data;
         return (
+          <>
             <Tooltip title={`${songs.length} songs`} placement="top" arrow>
           <div className={styles.songCard}>
               <Card className={styles.cardContent} sx={{ width: 159, height: 205 }}>
@@ -26,11 +27,15 @@ const SongCard = ({type, data}) => {
               <p>{title}</p>
           </div>
           </Tooltip>
+         
+          </>
+          
         );
       }
       case "song":{
         const{image, likes, title} = data;
         return(
+          <>
           <div className={styles.songCard}>
             <Card className={styles.cardContent} sx={{ width: 159, height: 205 }}>
               <CardActionArea>
@@ -45,6 +50,7 @@ const SongCard = ({type, data}) => {
             </Card>
               <p>{title}</p>
           </div>
+          </>
         );
       }
       default:
